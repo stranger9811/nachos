@@ -286,7 +286,7 @@ ExceptionHandler(ExceptionType which)
         machine->WriteRegister(PCReg, machine->ReadRegister(NextPCReg));
         machine->WriteRegister(NextPCReg, machine->ReadRegister(NextPCReg)+4);
     }
-    else if((which == SyscallException) && (type == SC_SemOP)) {
+    else if((which == SyscallException) && (type == SC_SemOp)) {
         
         int id = machine->ReadRegister(4);
         int op  = machine->ReadRegister(5);

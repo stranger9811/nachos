@@ -15,6 +15,7 @@
 #include "interrupt.h"
 #include "stats.h"
 #include "timer.h"
+#include "synch.h"
 
 #define MAX_THREAD_COUNT 1000
 #define MAX_SEM_COUNT 1000
@@ -51,7 +52,7 @@ extern Timer *timer;				// the hardware alarm clock
 extern unsigned numPagesAllocated;		// number of physical frames allocated
 
 extern Thread *threadArray[];  // Array of thread pointers
-extern Sempaphore *semArray[];
+extern Semaphore *semArray[];
 extern unsigned thread_index;                  // Index into this array (also used to assign unique pid)
 extern bool initializedConsoleSemaphores;	// Used to initialize the semaphores for console I/O exactly once
 extern bool exitThreadArray[];		// Marks exited threads
